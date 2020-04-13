@@ -33,4 +33,10 @@ jobs:
     - name: Build
       run: go build -v .
 
+    - name: compile and release
+          uses: ngs/go-release.action@v1.0.1
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            GOARCH: amd64
+            GOOS: darwin
 
